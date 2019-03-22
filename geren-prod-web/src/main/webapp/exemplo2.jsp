@@ -30,7 +30,7 @@
 
         %>
         <h2>Welcome <span style="text-decoration: underline"><c:out value="${nomeAttr}" /></span>  sua idade é <c:out value="${idadeAttr}" /> anos</h2>
-        <img src="temer-livre.jpg">
+        <img src="senac_logo.png">
         <c:forEach begin="0" end="99" var="contador">
             <c:if test="${contador % 2 == 0}">
                 <h2>Teste <c:out value="${contador}"/></h2>

@@ -25,7 +25,7 @@
             LocalDate outro = LocalDate.now().minusYears(date.getYear());
         %>
         <h2>Welcome <span style="text-decoration: underline"><%= nome %></span>  sua idade é <%= outro.getYear() %> anos</h2>
-        <img src="temer-livre.jpg">
+        <img src="senac_logo.png">
         <%
             for (int i = 0; i < 100; i++) {
             %>
