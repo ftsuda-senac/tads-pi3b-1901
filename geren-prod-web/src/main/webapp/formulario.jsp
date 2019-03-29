@@ -18,7 +18,7 @@
                         <input name="nome" type="text" required />
                     </div>
                     <c:if test="${not empty erroNome}">
-                        <div style="background-color"><c:out value="${erroNome}" /></div>
+                        <div style="background-color: lightpink"><c:out value="${erroNome}" /></div>
                     </c:if>
                 </div>
                 <div>
@@ -39,7 +39,7 @@
                         <textarea name="descricao"></textarea>
                     </div>
                     <c:if test="${not empty erroDescricao}">
-                        <div style="background-color"><c:out value="${erroDescricao}" /></div>
+                        <div style="background-color: lightpink"><c:out value="${erroDescricao}" /></div>
                     </c:if>
                 </div>
                 <div>
@@ -73,7 +73,7 @@
                     <input type="checkbox" name="categoria" value="4" /> <label>Categoria 4</label>
                     <input type="checkbox" name="categoria" value="5" /> <label>Categoria 5</label>
                     <c:if test="${not empty erroCategoria}">
-                        <div style="background-color"><c:out value="${erroCategoria}" /></div>
+                        <div style="background-color: lightpink"><c:out value="${erroCategoria}" /></div>
                     </c:if>
                 </fieldset>
                 <div>

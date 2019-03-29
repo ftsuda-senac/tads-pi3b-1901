@@ -57,6 +57,7 @@ public class ProdutoServlet extends HttpServlet {
         }
 
         // ARMAZENANDO VALORES COMO ATRIBUTOS
+        request.setAttribute("metodoHttp", metodoHttp);
         request.setAttribute("nome", nome);
         request.setAttribute("descricao", descricao);
         request.setAttribute("senha", senha);
@@ -66,24 +67,21 @@ public class ProdutoServlet extends HttpServlet {
         request.setAttribute("disponivel", "1".equals(disponivelStr) ? "SIM" : "NÃO");
         request.setAttribute("categorias", Arrays.asList(categoriasArr));
 
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/resultado.jsp");
+        RequestDispatcher dispatcher = 
+                request.getRequestDispatcher("/WEB-INF/jsp/resultado.jsp");
         dispatcher.forward(request, response);
     }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        //processarRequisicao("GET", request, response);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("formulario.jsp");
-        dispatcher.forward(request, response);
+        processarRequisicao("GET", request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        //processarRequisicao("GET", request, response);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("formulario.jsp");
-        dispatcher.forward(request, response);
+        processarRequisicao("POST", request, response);
     }
 
 }
