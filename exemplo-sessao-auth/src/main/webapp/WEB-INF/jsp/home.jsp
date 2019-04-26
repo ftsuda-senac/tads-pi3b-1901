@@ -20,6 +20,7 @@
                             <li><c:out value="${pap.nome}" /></li>
                         </c:forEach>
                     </ul>
+                    <a href="${pageContext.request.contextPath}/logout">Sair</a>
                 </div>
 
             </c:when>

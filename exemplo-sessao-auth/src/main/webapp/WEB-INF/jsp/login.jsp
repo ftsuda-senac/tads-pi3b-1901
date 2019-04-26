@@ -1,4 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -7,8 +8,11 @@
     </head>
     <body>
         <h1>Login</h1>
+        <c:if test="${msgErro != null}">
+            <div class="erro"><c:out value="${msgErro}" /></div>
+        </c:if>    
         <div>
-            <form action="${pageContext.request.contextPath}" method="post">
+            <form action="${pageContext.request.contextPath}/login" method="post">
                 <div>
                     <label>Username</label>
                     <input type="text" name="username" />
