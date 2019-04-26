@@ -18,9 +18,22 @@
                     <ul>
                         <c:forEach items="${sessionScope.usuario.papeis}" var="pap">
                             <li><c:out value="${pap.nome}" /></li>
-                        </c:forEach>
+                            </c:forEach>
                     </ul>
-                    <a href="${pageContext.request.contextPath}/logout">Sair</a>
+                    Opções
+                    <ul>
+                        <c:if test="${sessionScope.usuario.verificarPapel('PEAO')}">
+                            <li><a href="${pageContext.request.contextPath}/protegido/peao-page">Página do PEAO</a></li>
+                        </c:if>
+                        <c:if test="${sessionScope.usuario.verificarPapel('FODON')}">
+                            <li><a href="${pageContext.request.contextPath}/protegido/fodon-page">Página do FODON</a></li>
+                        </c:if>
+                        <c:if test="${sessionScope.usuario.verificarPapel('GOD')}">
+                            <li><a href="${pageContext.request.contextPath}/protegido/god-page">Página do GOD</a></li>
+                        </c:if>
+                        <li><a href="${pageContext.request.contextPath}/logout">Sair</a></li>
+                    </ul>
+
                 </div>
 
             </c:when>
